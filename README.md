@@ -21,7 +21,6 @@ In order to execute the code, you need an [Anaconda](https://www.anaconda.com/) 
 #### Main Packages
 
 * ```python v3.9.16```
-* ```pip v23.1.2```
 * ```numpy v1.24.3```
 * ```scipy v1.10.1```
 * ```tensorflow v2.13.0```
