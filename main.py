@@ -16,7 +16,7 @@ tf.compat.v1.disable_eager_execution()
 g_dfl_instance = G_DFL(args.verbose, args.save_logs, 
                        args.max_time * 60 if args.max_time is not None else np.inf, args.max_fun if args.max_fun is not None else np.inf, args.max_it if args.max_it is not None else np.inf, args.max_num_discrete_dirs,
                        args.tolerance_for_best,
-                       args.tolerance_for_continuous_dir, args.armijo_alpha_0, args.armijo_gamma, args.armijo_delta, args.armijo_min_alpha,
+                       args.tolerance_for_continuous_dir, args.armijo_gamma, args.armijo_delta, args.armijo_min_alpha,
                        args.eta_for_discrete_dir, args.xi_for_discrete_dir, args.min_xi_for_discrete_dir)
 
 for problem_item in PROBLEMS:

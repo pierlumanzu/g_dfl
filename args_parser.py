@@ -21,7 +21,6 @@ def get_args():
     parser.add_argument('--tolerance_for_best', help='Tolerance for new best solution', type=float, default=1e-7)
     
     parser.add_argument('--tolerance_for_continuous_dir', help='Tolerance for gradient-related direction', type=float, default=1e-6)
-    parser.add_argument('--armijo_alpha_0', help='Starting value for alpha in Armijo-type line search', type=float, default=1)
     parser.add_argument('--armijo_gamma', help='Gamma parameter for Armijo-type line search', type=float, default=1e-4)
     parser.add_argument('--armijo_delta', help='Delta parameter for Armijo-type line search', type=float, default=0.5)
     parser.add_argument('--armijo_min_alpha', help='Minimum value for alpha in Armijo-type line search', type=float, default=1e-7)
@@ -56,10 +55,9 @@ def check_args(args):
     assert args.tolerance_for_best >= 0
 
     assert args.tolerance_for_continuous_dir >= 0
-    assert args.armijo_alpha_0 > 0
     assert 0 < args.armijo_gamma < 1
     assert 0 < args.armijo_delta < 1
-    assert 0 < args.armijo_min_alpha < args.armijo_alpha_0
+    assert 0 < args.armijo_min_alpha < 1
 
     assert args.eta_for_discrete_dir > 0
     assert args.xi_for_discrete_dir > 0

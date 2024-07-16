@@ -11,7 +11,7 @@ class G_DFL:
                  verbose, save_logs, 
                  max_time, max_fun, max_it, max_num_disceret_dirs, 
                  tolerance_for_best,
-                 tolerance_for_continuous_dir, armijo_alpha_0, armijo_gamma, armijo_delta, armijo_min_alpha,
+                 tolerance_for_continuous_dir, armijo_gamma, armijo_delta, armijo_min_alpha,
                  eta_for_discrete_dir, xi_for_discrete_dir, min_xi_for_discrete_dir):
         
         self.verbose = verbose
@@ -25,7 +25,6 @@ class G_DFL:
         self.tolerance_for_best = tolerance_for_best
 
         self.tolerance_for_continuous_dir = tolerance_for_continuous_dir
-        self.armijo_alpha_0 = armijo_alpha_0
         self.armijo_gamma = armijo_gamma
         self.armijo_delta = armijo_delta
         self.armijo_min_alpha = armijo_min_alpha
@@ -102,7 +101,7 @@ class G_DFL:
                     others_idx = np.setdiff1d(np.setdiff1d(np.arange(problem.n), gr_x_lb_idx), ls_x_ub_idx)
                     dir[others_idx] = -gr[others_idx]
 
-                alpha_fw = self.armijo_alpha_0
+                alpha_fw = 1
 
                 f_tmp_2 = problem.feval(x_tmp + alpha_fw * dir)
                 n_f_evals += 1
