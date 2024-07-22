@@ -5,13 +5,22 @@
 
 Implementation of the G-DFL algorithm proposed in 
 
-TODO
+[Lapucci M., Liuzzi G., Lucidi S. & Mansueto P., Combining Gradient Information and Primitive Directions for High-Performance Mixed-Integer Optimization. arXiv pre-print (2024)](
+https://arxiv.org/abs/2407.14416)
 
 If you have used our code for research purposes, please cite the publication mentioned above.
 For the sake of simplicity, we provide the Bibtex format:
 
 ```
-TODO
+@misc{lapucci2024combininggradientinformationprimitive,
+    title={Combining Gradient Information and Primitive Directions for High-Performance Mixed-Integer Optimization}, 
+    author={Matteo Lapucci and Giampaolo Liuzzi and Stefano Lucidi and Pierluigi Mansueto},
+    year={2024},
+    eprint={2407.14416},
+    archivePrefix={arXiv},
+    primaryClass={math.OC},
+    url={https://arxiv.org/abs/2407.14416}, 
+}
 ```
 
 ### Main Dependencies Installation
