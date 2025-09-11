@@ -8,6 +8,11 @@ Implementation of the G-DFL algorithm proposed in
 [Lapucci M., Liuzzi G., Lucidi S. & Mansueto P., Combining Gradient Information and Primitive Directions for High-Performance Mixed-Integer Optimization. arXiv pre-print (2024)](
 https://arxiv.org/abs/2407.14416)
 
+and of the MISQP algorithm introduced in
+
+[Exler O. & Schittkowksi K., A trust region SQP algorithm for mixed-integer nonlinear programming. Optimization Letters (2007)](
+https://arxiv.org/abs/2407.14416)
+
 If you have used our code for research purposes, please cite the publication mentioned above.
 For the sake of simplicity, we provide the Bibtex format:
 
@@ -38,9 +43,9 @@ In order to execute the code, you need an [Anaconda](https://www.anaconda.com/) 
 
 In ```args_parser.py``` you can find all the possible arguments. Given a terminal (Anaconda Prompt for Windows users), two examples of execution could be the following.
 
-``` python main.py --seeds 16007 --verbose --max_time 2 --type_gradient_related_direction lbfgs ```
+``` python main.py --algs G-DFL MISQP --seeds 16007 --verbose --max_time 2 --type_gradient_related_direction lbfgs ```
 
-``` python main.py --seeds 16007 --save_logs --max_time 2 --type_gradient_related_direction lbfgs ```
+``` python main.py --algs G-DFL MISQP --seeds 16007 --save_logs --max_time 2 --type_gradient_related_direction lbfgs ```
 
 In the second case, the logs are saved in the ```Outputs``` folder. In ```main.py```, you can find all the documentation about how they are stored.
 

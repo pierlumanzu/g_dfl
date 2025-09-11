@@ -8,14 +8,13 @@ from scipy.optimize import minimize
 class G_DFL:
 
     def __init__(self, 
-                 verbose, save_logs, 
+                 verbose, 
                  max_time, max_fun, max_it, max_num_disceret_dirs, 
                  tolerance_for_best,
                  tolerance_for_continuous_dir, armijo_gamma, armijo_delta, armijo_min_alpha,
                  eta_for_discrete_dir, xi_for_discrete_dir, min_xi_for_discrete_dir):
         
         self.verbose = verbose
-        self.save_logs = save_logs
 
         self.max_time = max_time
         self.max_fun = max_fun
@@ -304,8 +303,8 @@ class G_DFL:
         old_max_alpha = np.inf
 
         if self.verbose:
-            print_format = '%s|   %5d |        %5d | %+13.8e | %+13.8e | %5d/%5d |   '
-            print(' T |  n_iter |    n_f_evals |        f     |    max_alpha    |        ndir |')
+            print_format = '%s| %+13.8e |   %5d |        %5d | %+13.8e | %+13.8e | %5d/%5d |   '
+            print(' T |        time     |  n_iter |    n_f_evals |           f     |     max_alpha   |        ndir |')
 
         cont_moved = True
         int_moved = True
@@ -334,7 +333,7 @@ class G_DFL:
                     return best_x, best_f, "Max time reached", n_f_evals, best_nf, n_iter - 1, best_it, best_time, n_g_evals, best_ng
 
                 if self.verbose:
-                    print(print_format % ('(c)', n_iter, n_f_evals, fy, alpha_fw, 1, 1))
+                    print(print_format % ('(c)', time.time() - start_time, n_iter, n_f_evals, fy, alpha_fw, 1, 1))
             
             if fy < best_f - self.tolerance_for_best:
                 best_x = y
@@ -422,7 +421,7 @@ class G_DFL:
                         best_time = time.time() - start_time
 
                 if self.verbose:
-                    print(print_format % ('(d)', n_iter, n_f_evals, fy, max(alpha_tilde), i_dir + 1, np.shape(D)[1]))
+                    print(print_format % ('(d)', time.time() - start_time, n_iter, n_f_evals, fy, max(alpha_tilde), i_dir + 1, np.shape(D)[1]))
 
                 if all_ones_for_ds >= 1:
                     break
