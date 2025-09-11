@@ -10,8 +10,7 @@ https://arxiv.org/abs/2407.14416)
 
 and of the MISQP algorithm introduced in
 
-[Exler O. & Schittkowksi K., A trust region SQP algorithm for mixed-integer nonlinear programming. Optimization Letters (2007)](
-https://arxiv.org/abs/2407.14416)
+[Exler O. & Schittkowksi K., A trust region SQP algorithm for mixed-integer nonlinear programming. Optimization Letters (2007)](https://doi.org/10.1007/s11590-006-0026-1)
 
 If you have used our code for research purposes, please cite the publication mentioned above.
 For the sake of simplicity, we provide the Bibtex format:
