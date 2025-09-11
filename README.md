@@ -37,6 +37,11 @@ In order to execute the code, you need an [Anaconda](https://www.anaconda.com/) 
 * ```numpy v1.24.3```
 * ```scipy v1.10.1```
 * ```tensorflow v2.13.0```
+* ```gurobipy v11.0.0```
+
+##### Gurobi Optimizer
+
+In order to run some parts of the code, the [Gurobi](https://www.gurobi.com/) Optimizer (Version 11 or higher) needs to be installed and, in addition, a valid Gurobi licence is required.
 
 ### Usage
 
